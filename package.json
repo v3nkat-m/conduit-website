@@ -1,12 +1,8 @@
 {
-  "devDependencies": {
-    "concurrently": "^8.0.1",
-    "prettier": "^2.8.8"
-  },
   "scripts": {
-    "start": "concurrently \"npm run start-backend\" \"npm run start-frontend\"",
-    "start-backend": "cd backend/conduit-backend & nodemon app.js",
-    "start-frontend": "cd frontend & npm start"
+    "start": "node backend/conduit-backend/app.js",
+    "build": "cd frontend && npm run build",
+    "start-prod": "node backend/conduit-backend/app.js"
   },
   "dependencies": {
     "dotenv": "^16.0.3"
